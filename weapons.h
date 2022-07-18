@@ -8,7 +8,7 @@ public:
     int range;
     int accuracy;
     void great_choice(){
-        std::cout << "great choice!" <<"\n";
+        std::cout << "\n" << "great choice!" <<"\n"<<"\n";
     }
 };
 
@@ -16,7 +16,7 @@ public:
 int sword_sel(){
     weapon sword_;
     sword_.level = 1;
-    sword_.range = 1.5;
+    sword_.range = 1;
     sword_.accuracy = 5;
     sword_.great_choice();
     return 0;

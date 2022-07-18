@@ -5,7 +5,7 @@
 int select_message(){
     int index;
     std::cout<< "time to select your weapon" << "\n";
-    std::cout << "1. Sword" <<"\n" << "2. Bow " << "\n" << "3. Axe" << "\n";
+    std::cout << "1. Sword" <<"\n" << "2. Bow " << "\n" << "3. Axe" << "\n" << "\n";
     std::cin >> index;
     if (index == 1)
     {
@@ -16,9 +16,6 @@ int select_message(){
     }
     if (index == 3){
         axe_sel();
-    }
-    else{
-        sword_sel();
     }
     return 0;
     
