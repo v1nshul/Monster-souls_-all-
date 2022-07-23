@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream> 
 #include "Windows.h"
 
@@ -6,7 +8,13 @@ class monsters
 
 public:
     int monster_lvl; 
+    const int monster_maxHealth;
+    int monster_currentHealth;
     std::string name; 
+
+    monsters() : monster_maxHealth(100){
+        monster_currentHealth = 100;
+    };
 
     void monster_intro(){
         system("Color 0C");

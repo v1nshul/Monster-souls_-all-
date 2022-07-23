@@ -1,3 +1,7 @@
+#ifndef _WP_
+#define _WP_
+
+
 #include <iostream>
 
 class weapon
@@ -39,3 +43,5 @@ int axe_sel(){
     axe_.great_choice();
     return 0;
 }
+
+#endif
