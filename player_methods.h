@@ -7,6 +7,7 @@
 #include "player.h"
 #include "player_run.h"
 #include "player_def.h"
+#include "weapon_select.h"
 
 
 monsters sample;
@@ -29,7 +30,7 @@ int player_action(){
     {
        
        while(sample.monster_currentHealth > 0){
-            int a = rand() % 100;
+            int a = rand() % 60 + damage_;
             sample.monster_currentHealth = sample.monster_currentHealth- a;
             if(sample.monster_currentHealth <= 0){
             std::cout <<"u won";
@@ -37,7 +38,8 @@ int player_action(){
             }   
             else
             {
-                std::cout<<"monsters current health is " << sample.monster_currentHealth << std::endl;
+                std::cout<<"monsters current health is " << sample.monster_currentHealth << " after a damage of " << a << std::endl;
+                
                 player_action();
             }
             
