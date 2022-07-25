@@ -29,16 +29,20 @@ int player_action(){
     {
        
        while(sample.monster_currentHealth > 0){
-        if(sample.monster_currentHealth <= 0){
-            std::cout <<"u won";
-            break;
-        }
-        else{
             int a = rand() % 100;
             sample.monster_currentHealth = sample.monster_currentHealth- a;
-            std::cout<<"monsters current health is " << sample.monster_currentHealth << std::endl;
-            player_action();
-        }
+            if(sample.monster_currentHealth <= 0){
+            std::cout <<"u won";
+            break;
+            }   
+            else
+            {
+                std::cout<<"monsters current health is " << sample.monster_currentHealth << std::endl;
+                player_action();
+            }
+            
+            
+        
        }
     }
 
