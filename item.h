@@ -1,7 +1,7 @@
 #ifndef ITEM_H
+#define ITEM_H
 
 #define NO_STATS 1
-#define ITEM_H
 
 
 #include <string>

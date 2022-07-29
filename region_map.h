@@ -1,3 +1,6 @@
+#ifndef REGION_MAP_H
+#define REGION_MAP_H
+
 #include <iostream>
 
 #include <iostream>
@@ -55,3 +58,5 @@ void output_region(std::array<int, 2> location) {
 
 
 }
+
+#endif
