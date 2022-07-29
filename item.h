@@ -1,5 +1,8 @@
 #ifndef ITEM_H
+
+#define NO_STATS 1
 #define ITEM_H
+
 
 #include <string>
 #include <array>
@@ -24,9 +27,9 @@ class Item {
 
         const std::string type;
 
-        const std::array<int, /*however many stats the player has*/> modifiers;
+        const std::array<int, NO_STATS> modifiers;
 
-        Item(std::string type, std::array<int, /*however many stats the player has*/> modifiers) : type(type), modifiers(modifiers) {}
+        Item(std::string type, std::array<int, NO_STATS> modifiers) : type(type), modifiers(modifiers) {}
 
 
 };

@@ -1,5 +1,14 @@
 #include <string>
 #include <map>
+#include <vector>
+#include <tuple>
+
+//inclusion of libraries that one of us wrote
+#include "item.h"
+#include "weapons.h"
+
+
+#define NO_STATS 1
 
 
 
@@ -21,11 +30,37 @@ class Player {
         static std::string name;
         static bool isInBattle;
 
-        //is it possible to have static const
-        static /*const*/ int max_health;
+        //pointers to the player's currently selected items
+        static Item* selected_weapon;
+        //etc.
 
 
-        //static std::map inventory;
+
+
+        
+        static const int max_health;
+
+
+
+
+
+        // player's stats
+
+        // static std::array<int, NO_STATS> stats;
+
+
+
+
+        // //inventory compartment pointers
+
+        // static tuple<Weapon*, Armour*, Special*> inventory;
+
+
+
+
+        // //inventory compartments
+
+        // static weapon, armour, special, etc. vectors
 
 
         
@@ -46,3 +81,6 @@ int Player::max_health = 100;
 int Player::health = Player::max_health;
 bool Player::isInBattle = false;
 std::string Player::name = "Quandale Dingle";
+std::map<std::string, std::vector<Item>>  Player::inventory = ;
+
+const Player::max_health = 100;
