@@ -1,3 +1,4 @@
 .vscode/launch.json
 .vscode/tasks.json
 john_unused/john_player.h
+CMakeLists.txt
