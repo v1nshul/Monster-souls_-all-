@@ -11,6 +11,7 @@ class player
     int currentHealth; 
     player(){
         maxHealth = 100;
+        currentHealth = maxHealth;
     }
 
     void show_player_stats(){
