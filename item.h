@@ -1,11 +1,10 @@
 #ifndef ITEM_H
 #define ITEM_H
 
-#define NO_STATS 1
 
 
 #include <string>
-#include <array>
+#include <vector>
 
 
 /**
@@ -25,11 +24,18 @@ class Item {
     
     public:
 
-        const std::string type;
+        std::string type;
 
-        const std::array<int, NO_STATS> modifiers;
+        //0 attack, 1 block, 2 speed
+        std::vector<int> modifiers;
 
-        Item(std::string type, std::array<int, NO_STATS> modifiers) : type(type), modifiers(modifiers) {}
+        Item(std::string type, int attack_mod, int block_mod, int speed_mod) {
+            this->type = type;
+
+            this->modifiers[0] = attack_mod;
+            this->modifiers[1] = block_mod;
+            this->modifiers[2] = speed_mod;
+        }
 
 
 };
